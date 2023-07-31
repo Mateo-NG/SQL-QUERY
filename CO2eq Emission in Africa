@@ -1,0 +1,1202 @@
+use co2emission
+select *
+from co2eq_emission
+
+select COLUMN_NAME
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'co2eq_emission'
+
+---CLEANING THE DATA
+---- changing the table format to get Emissions (CO2eq) from N2O (AR5)
+WITH UpdatedData AS (
+    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2000,
+        2000 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2000
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]  ---- this is suppose to be named Emissions_CO2eq_from_N2O
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2001,
+        2001 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2001
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+	
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2002,
+        2002 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2002
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+	
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2003,
+        2003 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2003
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2004,
+        2004 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2004
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2005,
+        2005 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2005
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2006,
+        2006 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2006
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2007,
+        2007 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2007
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2008,
+        2008 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2008
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2009,
+        2009 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2009
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2010,
+        2010 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2010
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2011,
+        2011 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2011
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2012,
+        2012 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2012
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2013,
+        2013 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2013
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2014,
+        2014 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2014
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2015,
+        2015 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2015
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2016,
+        2016 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2016
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2017,
+        2017 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2017
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2018,
+        2018 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2018
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+			
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2019,
+        2019 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2019
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2020,
+        2020 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from N2O (AR5)' THEN Y2020
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from N2O (AR5)'
+)
+--- Create a new table with the updated data 
+SELECT * INTO [emissions_CO2eq_from_N2O_AR5] FROM UpdatedData;
+
+SELECT *
+FROM emissions_CO2eq_from_N2O_AR5
+ORDER BY Area, year  ASC;
+
+
+---- changing the table format to get Emissions (CO2eq) (AR5) into a column 
+WITH UpdatedData AS (
+    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2000,
+        2000 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2000
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2001,
+        2001 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2001
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+	
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2002,
+        2002 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2002
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+	
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2003,
+        2003 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2003
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2004,
+        2004 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2004
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2005,
+        2005 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2005
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2006,
+        2006 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2006
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2007,
+        2007 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2007
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2008,
+        2008 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2008
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2009,
+        2009 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2009
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2010,
+        2010 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2010
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2011,
+        2011 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2011
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2012,
+        2012 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2012
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2013,
+        2013 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2013
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2014,
+        2014 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2014
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2015,
+        2015 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2015
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2016,
+        2016 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2016
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element ='Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2017,
+        2017 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2017
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2018,
+        2018 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2018
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+			
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2019,
+        2019 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2019
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2020,
+        2020 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) (AR5)' THEN Y2020
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) (AR5)'
+)
+----Creating a new table with the updated data
+SELECT *
+INTO [emissions_CO2eq_AR5]
+FROM UpdatedData;
+
+
+SELECT *
+FROM [emissions_CO2eq_AR5]
+ORDER BY Area,year  ASC;
+
+
+---- changing the table format to make Emissions (CO2eq) from CH4 (AR5) a column 
+WITH UpdatedData AS (
+    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2000,
+        2000 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2000
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)] ------ suppose to be Emissions (CO2eq) from CH4 (AR5)
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2001,
+        2001 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2001
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+	
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2002,
+        2002 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2002
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+	
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2003,
+        2003 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2003
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2004,
+        2004 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2004
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2005,
+        2005 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2005
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2006,
+        2006 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2006
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2007,
+        2007 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2007
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2008,
+        2008 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2008
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2009,
+        2009 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2009
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2010,
+        2010 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2010
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2011,
+        2011 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2011
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2012,
+        2012 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2012
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2013,
+        2013 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2013
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2014,
+        2014 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2014
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2015,
+        2015 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2015
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2016,
+        2016 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2016
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element ='Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2017,
+        2017 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2017
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+		
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2018,
+        2018 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2018
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+			
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2019,
+        2019 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2019
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+
+	UNION ALL
+	    SELECT
+        Area,
+        Area_code,
+        Item,
+        Element,
+        Y2020,
+        2020 AS year,
+        CASE
+            WHEN Element = 'Emissions (CO2eq) from CH4 (AR5)' THEN Y2020
+            ELSE NULL
+        END AS [Emissions_CO2eq_(AR5)]
+    FROM co2eq_emission
+	WHERE Element = 'Emissions (CO2eq) from CH4 (AR5)'
+)
+----Creating a new table with the updated data
+SELECT *
+INTO [emissions_CO2eq_from_CH4_AR5]
+FROM UpdatedData;
+
+SELECT *
+FROM [emissions_CO2eq_from_CH4_AR5]
+ORDER BY Area,year  ASC;
+
+-- Rename columns in emissions_CO2eq_AR5 table
+EXEC sp_rename 'emissionS_CO2eq_AR5.Area', 'area', 'COLUMN'
+EXEC sp_rename 'emissions_CO2eq_AR5.Area_code', 'area_code', 'COLUMN'
+EXEC sp_rename 'emissionS_CO2eq_AR5.Item', 'item', 'COLUMN'
+EXEC sp_rename 'emissions_CO2eq_AR5.emissions_co2eq_AR5', 'emissions_CO2eq_AR5', 'COLUMN'
+
+----Rename columns in emissions_CO2eq_from_CH4_AR5 table
+EXEC sp_rename 'emissions_CO2eq_from_CH4_AR5.Area', 'area', 'COLUMN'
+EXEC sp_rename 'emissions_CO2eq_from_CH4_AR5.Area_code', 'area_code', 'COLUMN'
+EXEC sp_rename 'emissions_CO2eq_from_CH4_AR5.Item', 'item', 'COLUMN'
+EXEC sp_rename 'emissions_CO2eq_from_CH4_AR5.Emissions_CO2eq_(AR5)', 'emissions_CO2eq_from_CH4_AR5', 'COLUMN'
+
+----Rename columns in emissions_CO2eq_from_N2O_AR5 table
+EXEC sp_rename 'emissions_CO2eq_from_N2O_AR5.Area', 'area', 'COLUMN'
+EXEC sp_rename 'emissions_CO2eq_from_N2O_AR5.Area_code', 'area_code', 'COLUMN'
+EXEC sp_rename 'emissions_CO2eq_from_N2O_AR5.Item', 'item', 'COLUMN'
+EXEC sp_rename 'emissions_CO2eq_from_N2O_AR5.Emissions_CO2eq_(AR5)', 'emissions_CO2eq_from_N2O_AR5', 'COLUMN'
+
+---- JOINING emissions_CO2eq_AR5 and emissions_CO2eq_from_CH4_AR5 as joined_data
+SELECT
+    CO2.area_code,
+    CO2.area,
+    CO2.item,
+    CO2.year,
+    CO2.emissions_CO2eq_AR5,
+    CH4.emissions_CO2eq_from_CH4_AR5
+INTO joined_data
+FROM emissions_CO2eq_AR5 AS CO2
+INNER JOIN emissions_CO2eq_from_CH4_AR5 AS CH4
+    ON CO2.area_code = CH4.area_code
+    AND CO2.area = CH4.area
+    AND CO2.item = CH4.item
+    AND CO2.year = CH4.year;
+
+select*
+from joined_data
+
+---- JOINING joined_data and emissions_CO2eq_from_N2O_AR5
+SELECT
+    j.area_code,
+    j.area,
+    j.item,
+    j.year,
+    j.emissions_CO2eq_AR5,
+    j.emissions_CO2eq_from_CH4_AR5,
+    N2O.emissions_CO2eq_from_N2O_AR5
+INTO agro_activities_emissions
+FROM joined_data as j
+JOIN emissions_CO2eq_from_N2O_AR5 AS N2O
+ON j.area_code = N2O.area_code
+	AND j.area = N2O.area
+	AND j.item = N2O.item
+	AND j.year = N2O.year;
+
+select *
+from agro_activities_emissions
+ORDER BY year ASC;
+
+----Major co2eq Emission Sources within the Agricultural Sector in Africa."
+SELECT 
+    item,
+    SUM(emissions_CO2eq_AR5) as total_emissions
+FROM agro_activities_emissions
+GROUP BY item
+ORDER BY total_emissions DESC;
+
+
+---------Major Emission Sources by country excluding 'All sectors with LULUCF', 'All sectors without LULUCF', and 'energy'
+WITH EmissionsPerCountry AS (
+    SELECT 
+        area AS [Country],
+        item AS [Agricultural Product],
+        SUM(emissions_CO2eq_from_CH4_AR5 + emissions_CO2eq_from_N2O_AR5) as total_emission
+    FROM agro_activities_emissions
+    WHERE item NOT IN ('All sectors with LULUCF', 'All sectors without LULUCF', 'energy') 
+    GROUP BY area, item
+),
+MaxEmissionPerCountry AS (
+    SELECT
+        [Country],
+        MAX(total_emission) as max_emission
+    FROM EmissionsPerCountry
+    GROUP BY [Country]
+),
+RankedEmissions AS (
+    SELECT
+        E.[Country],
+        E.[Agricultural Product],
+        E.total_emission,
+        RANK() OVER (PARTITION BY E.[Country] ORDER BY E.total_emission DESC) AS emission_rank
+    FROM EmissionsPerCountry E
+    JOIN MaxEmissionPerCountry M ON E.[Country] = M.[Country]
+)
+SELECT
+    R.[Country],
+    R.[Agricultural Product],
+    R.total_emission,
+    CASE 
+        WHEN R.emission_rank = 1 THEN 'High Impact'
+        WHEN R.emission_rank = 2 THEN 'Medium Impact'
+        ELSE 'Low Impact'
+    END AS [Impact]
+FROM RankedEmissions R
+ORDER BY R.[Country], R.total_emission DESC;
+
+
+SELECT DISTINCT Item
+FROM agro_activities_emissions
+
+---- total emission trend
+SELECT
+    year AS [Year],
+    SUM(emissions_CO2eq_from_CH4_AR5) as emissions_CO2eq_from_CH4 , 
+	SUM(emissions_CO2eq_from_N2O_AR5) as emissions_CO2eq_from_N2O,
+	SUM(emissions_CO2eq_AR5) AS total_emissions
+FROM agro_activities_emissions
+GROUP BY year
+ORDER BY year;
+
+----comparing the emissions from different major sources for each gas.
+SELECT 
+    item,
+    SUM(emissions_CO2eq_from_CH4_AR5) as emissions_CO2eq_from_CH4 , 
+	SUM(emissions_CO2eq_from_N2O_AR5) as emissions_CO2eq_from_N2O
+FROM agro_activities_emissions
+GROUP BY item
+ORDER BY item DESC;
+
+----Top ten agricfood_co2eq emitter 
+WITH EmissionsPerCountry AS (
+    SELECT 
+        area AS [Country],
+        SUM(emissions_CO2eq_AR5) as total_co2eq_emission
+    FROM agro_activities_emissions
+    GROUP BY area
+)
+SELECT
+    [Country],
+    total_co2eq_emission
+FROM (
+    SELECT
+        [Country],
+        total_co2eq_emission,
+        RANK() OVER (ORDER BY total_co2eq_emission DESC) AS emission_rank
+    FROM EmissionsPerCountry
+) AS RankedCountries
+WHERE emission_rank <= 10
+ORDER BY total_co2eq_emission DESC;
+
+--- comparing Savanna and Forest fires with co2eq emission
+WITH EmissionsPerSource AS (
+    SELECT
+		year,
+        item AS [Emission Source],
+        SUM(emissions_CO2eq_AR5) AS total_co2_emission
+    FROM agro_activities_emissions
+    WHERE item IN ('Savanna fires', 'Forest fires')  
+    GROUP BY item, year
+)
+SELECT
+	year,
+    [Emission Source],
+    total_co2_emission
+FROM EmissionsPerSource
+ORDER BY total_co2_emission DESC;
+
+---comparing agricultural output with various emissions
+-----filtering the agricultural output data 
+SELECT
+	Entity as entity,
+	Year as year,
+	output_quantity
+INTO filtered_agric_output_dollars
+FROM 
+ agricultural_output_dollars 
+WHERE Year Between 1990 and 2020 
+AND Entity IN ('Algeria', 'Angola', 'Benin', 'Botswana', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cameroon', 'Central African Republic', 'Chad', 'Comoros', 'Congo', 'Democratic Republic of the Congo', 'Djibouti', 'Egypt', 'Equatorial Guinea', 'Eritrea', 'Eswatini', 'Ethiopia', 'Gabon', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Kenya', 'Lesotho', 'Liberia', 'Libya', 'Madagascar', 'Malawi', 'Mali', 'Mauritania', 'Mauritius', 'Morocco', 'Mozambique', 'Namibia', 'Niger', 'Nigeria', 'Rwanda', 'Sao Tome and Principe', 'Senegal', 'Seychelles', 'Sierra Leone', 'Somalia', 'South Africa', 'South Sudan', 'Sudan', 'Tanzania', 'Togo', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe');
+
+
+select*
+from filtered_agric_output_dollars
+
+----joining the agricultural activities emission with agricultural output per country
+WITH EmissionsPerYear AS (
+    SELECT
+        year,
+        SUM(emissions_CO2eq_AR5) AS total_emissions_CO2eq_AR5,
+        SUM(emissions_CO2eq_from_CH4_AR5) AS total_emissions_CO2eq_from_CH4_AR5,
+        SUM(emissions_CO2eq_from_N2O_AR5) AS total_emissions_CO2eq_from_N2O_AR5
+    FROM agro_activities_emissions
+    GROUP BY year
+)
+SELECT
+    A.entity AS area,
+    E.year,
+    E.total_emissions_CO2eq_AR5,
+    E.total_emissions_CO2eq_from_CH4_AR5,
+    E.total_emissions_CO2eq_from_N2O_AR5,
+    A.output_quantity
+INTO filtered_agric_emissions_and_output
+FROM 
+    EmissionsPerYear as E
+JOIN 
+    filtered_agric_output_dollars as A
+    ON E.year = A.year 
+select*
+FROM filtered_agric_emissions_and_output
+
+---CHANGES IN EMISSION
+SELECT
+    year,
+    SUM(total_emissions_CO2eq_AR5) - LAG(SUM(total_emissions_CO2eq_AR5)) OVER (ORDER BY year) AS CO2eq_diff,
+    SUM(total_emissions_CO2eq_from_CH4_AR5) - LAG(SUM(total_emissions_CO2eq_from_CH4_AR5)) OVER (ORDER BY year) AS CH4_diff,
+    SUM(total_emissions_CO2eq_from_N2O_AR5) - LAG(SUM(total_emissions_CO2eq_from_N2O_AR5)) OVER (ORDER BY year) AS N2O_diff
+FROM filtered_agric_emissions_and_output
+GROUP BY year
+ORDER BY year;
