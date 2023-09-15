@@ -1,0 +1,165 @@
+use test_data;
+-- creating a table
+create table Employees (
+employee_Id INT primary key,
+first_name varchar(50),
+Last_name varchar (50),
+department varchar(50),
+salary decimal(10, 2), 
+Hire_date date
+);
+--- inserting data into the table
+insert into Employees (employee_Id, first_name, last_name, department, salary, hire_date)
+values
+	(1, 'John', 'Doe', 'HR', 50000.00, '2020-01-15'),
+    (2, 'Jane', 'Smith', 'IT', 60000.00, '2019-03-20'),
+    (3, 'Bob', 'Johnson', 'Finance', 55000.00, '2021-07-10'),
+    (4, 'Alice', 'Williams', 'Sales', 48000.00, '2018-05-05'),
+    (5, 'David', 'Brown', 'Marketing', 52000.00, '2022-02-18'),
+    (6, 'Matthew', 'Book', 'IT', 58000.00, '2023-04-29'),
+    (7, 'Tunde', 'James', 'Finance', 55000.00, '2022-05-03');
+    
+---- changing the column name 
+Alter Table employees
+rename column Last_name To last_name,
+rename column Hire_date To hire_date;
+
+--- retrieving the table
+select *
+from Employees;
+
+--- retrieving employee in IT department
+select first_name, last_name
+from employees
+where department = 'IT';
+
+--- finding the highest and lowest salary 
+select min(salary) as mini_salary, max(salary) as max_salary
+from employees;
+
+--- inserting new records
+insert into Employees (employee_Id, first_name, last_name, department, salary, hire_date)
+values (8, 'Emily', 'Davis', 'HR', 48000.00, '2023-09-29');
+
+--- aggregate finding average salary 
+select avg(salary) 
+from employees;
+
+--- counting the number of employees in each department 
+select department, count(*)as employee_count 
+from employees
+group by department;
+
+--- sorting employees hire date 
+select *
+from employees
+order by hire_date asc;
+
+--- swaping employee id 4 to 1 and 1 to 4 
+update employees
+set employee_Id = -1
+where employee_Id = 4;
+
+update employees
+set employee_Id = 4
+where employee_Id = 1;
+
+update employees
+set employee_Id = 1
+where employee_Id = -1;
+
+--- list employees in desc order of their salary 
+select *
+from employees
+order by salary desc;
+
+--- flitering 
+select *
+from employees
+where year(hire_date)= 2021;
+
+----- retrieve employees whose last name starts with s
+select *
+from employees
+where last_name LIKE 'S%';
+
+---- finding employee with salary higher than average
+select* from employees 
+where salary > (select avg(salary) 
+from employees);
+
+--- grouping and aggregate 
+select department, sum(salary) as total_salary_expense
+from employees
+group by department;
+
+--- find department with the highest total selary expense 
+select department, sum(salary) as tota_salary_expense
+from employees
+group by department
+order by tota_salary_expense desc; 
+
+--- find the top three highest-paid employees
+select first_name,last_name, salary
+from employees
+order by salary desc
+limit 3;
+
+--- calulate the tenure in years for each employees in the company
+select first_name,last_name, datediff(curdate(), hire_date)/365 as tenure_in_years
+from employees;
+
+---- retrieve employees who are in the IT or Marketing department
+select *
+from employees
+where department IN ('IT' , 'Marketing');
+
+---- find employee who have a salary greater than any employee in the finance department 
+select*
+from employees
+where salary > (select 
+	max(salary) from employees
+    where department = 'finance');
+
+--- date function, list employees who were hired more than 2 years ago
+select*
+from employees
+where date_add(hire_date, interval 2 year)< current_date();
+
+--- updating records
+update employees
+set first_name = 'Christian'
+where first_name = 'David';
+
+--- find employees hired on a specific date
+select *
+from employees
+where hire_date = '2020-01-15';
+
+--- uning conditional statemeny categorize employees into senior and junior based on their salary
+select first_name, last_name, salary,
+	case 
+		when salary > 50000
+	then 'senior'
+		else 'junior' 
+	end as employee_category
+from employees;
+
+--- rank employees by salary within their respective department
+select first_name, last_name, department, salary,
+	Rank() over (partition by department
+    order by salary desc) as salary_rank
+from employees;
+
+--- using case statement 
+select first_name, last_name, salary,
+	case
+    when salary < 50000
+    then 'low'
+    when salary >= 50000
+and salary < 55000 then 'medium'
+    else 'high'
+    end as salary_category
+from employees;
+select *
+from employees;
