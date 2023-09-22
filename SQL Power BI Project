@@ -1,0 +1,8 @@
+# About the Data: 
+The dataset I crafted simulates a business dealing in electronics, clothing, and food items. It includes crucial details such as location (states), order specifics, order numbers, customer IDs (primary key), order IDs (tracking daily or per item orders), individual item amounts, total order values, and payment methods.
+Electronics: Smartphone X Laptop Pro Fitness Tracker Wireless Earbuds LED TV 4KHome Security Camera Gaming Console 
+Clothing: Designer Jeans Handcrafted Jewelry Sunglasses Fashion Handbag 
+Food: Organic Coffee Beans Gourmet Chocolate Box
+## Data Cleaning and Analysis: I meticulously cleaned the dataset using Excel. I then harnessed SQL's power by employing WHERE, SELECT, FROM, ORDER BY, GROUP BY, SUM, FUNCTION, and AVERAGE clauses to answer pivotal questions. These inquiries ranged from total and average revenue to monthly and daily trends, payment methods, and state-based order analysis. The goal was to compare SQL results with Power BI outcomes.
+Reporting and Power BI Integration: Results were documented in a comprehensive report using Microsoft Word. Subsequently, I merged SQL data into Power BI. In Power BI, I added an order day column extracted from the date format and devised new measures for calculating averages, total orders, and more. 
+##Learning Experience: A significant takeaway from this project is the potential of Power BI for effective data presentation and visualization when used skillfully.
